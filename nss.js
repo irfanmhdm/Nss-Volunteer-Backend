@@ -37,7 +37,7 @@ const Nss = mongoose.model("Nss", new mongoose.Schema(
     }
 ))
 
-app.post("/add", async (req, res) => {
+app.post("/add-nss", async (req, res) => {
 
     await Nss.create(req.body)
     res.json({ "status": "success" })
@@ -45,7 +45,7 @@ app.post("/add", async (req, res) => {
 
 })
 
-app.get("/view", async (req, res) => {
+app.get("/view_nss", async (req, res) => {
 
     const nss = await Nss.find()
     res.json(entry)
